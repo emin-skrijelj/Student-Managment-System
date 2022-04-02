@@ -2,7 +2,7 @@
 using namespace std;
 
 class Person{
-    public:
+    private:
     string email;
     string name;
     string surname;
