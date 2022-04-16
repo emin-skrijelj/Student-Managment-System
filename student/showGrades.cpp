@@ -8,14 +8,17 @@ void showGrades(vector<int>marks){
     };
 };
 
-float averageGrade(vector<int>marks){
+float avgGrade(vector<int>marks){
     float avg;
     float cnt;
-    for(auto grade: marks){
+    for(auto &grade: marks){
         avg += grade;
         cnt += 1;
     };
     return avg/cnt;
 };
 
-
+int main(){
+    vector<int> m {2,3,4,3,3};
+    cout << avgGrade(m);
+};

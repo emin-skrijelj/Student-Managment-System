@@ -1,21 +1,24 @@
 #include <iostream>
 #include <vector>
 #include "person.cpp"
-#include "GradesCalc.cpp"
+#include "showGrades.cpp"
 using namespace std;
 
 class Student : private Person{
     private:
     int id;
     vector<int> eng_marks,math_marks,bio_marks,science_marks;
-    double averageGrades;
-    double averageGrade;
-    char grade;
     public:
-
     void getGrades();
+    float avgGrade();
 };
 
+float Student::avgGrade(){
+    float average;
+    average = (averageGrade(eng_marks)+averageGrade(math_marks)+averageGrade(bio_marks)+averageGrade(science_marks))/4;
+    cout << "Your average grade is:" << average;
+    return average;
+}
 
 void Student::getGrades(){
     cout << "English grades: ";
@@ -27,3 +30,4 @@ void Student::getGrades(){
     cout << "\nScience grades : ";
     showGrades(science_marks);
 };
+

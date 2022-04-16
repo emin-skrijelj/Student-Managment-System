@@ -9,6 +9,8 @@ class Person{
     string birthdate;
     string role;
     string password;
+    int id;
+
 
     Person(string email,string name,string surname,string birthdate,string role){
         this->email = email;
